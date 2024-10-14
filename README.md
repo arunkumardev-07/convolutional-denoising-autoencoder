@@ -28,8 +28,8 @@ STEP 4: Model Evaluation and Visualization
 Evaluate the model on noisy test images and visualize the denoised outputs alongside the original clean images.
 
 ## PROGRAM
-### Name: Bhargava S
-### Register Number: 212221040029
+### Name:Arunkumar.P
+### Register Number: 21222040016
 
 ```python
 from tensorflow import keras
@@ -90,7 +90,7 @@ decoded = layers.Conv2D(1, (3, 3), activation='sigmoid', padding='same')(x)
 
 # Define the autoencoder model
 autoencoder = keras.Model(input_img, decoded)
-print('Name: Bhargava          Register Number: 212221040029        ')
+print('Name: Arunkumar.P  Register Number: 21222040016')
 autoencoder.summary()
 autoencoder.compile(optimizer='adam', loss='binary_crossentropy')
 autoencoder.fit(x_train_noisy, x_train_scaled,
@@ -100,7 +100,7 @@ autoencoder.fit(x_train_noisy, x_train_scaled,
                 validation_data=(x_test_noisy, x_test_scaled))
 decoded_imgs = autoencoder.predict(x_test_noisy)
 n = 10
-print('Name:           Register Number:        ')
+print('Name:Arunkumar           Register Number:212222040016')
 plt.figure(figsize=(20, 4))
 for i in range(1, n + 1):
     # Display original
@@ -142,7 +142,8 @@ plt.show()
 ## OUTPUT
 
 ### Training Loss, Validation Loss Vs Iteration Plot
-![image](https://github.com/user-attachments/assets/d6f55335-d60e-4fb5-8068-a171bbe0b589)
+![Screenshot 2024-10-14 144644](https://github.com/user-attachments/assets/19fcbc99-2599-4136-b23f-6acc9b272511)
+
 
 
 ### Original vs Noisy Vs Reconstructed Image
